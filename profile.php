@@ -58,7 +58,7 @@
 
                             <div>
                                 <p></p>
-                                <a class="inf_link" href="#">Расчитать рацион</a>
+                                <a class="inf_link" href="raw.php">Расчитать рацион</a>
                             </div>
 
                             <div>

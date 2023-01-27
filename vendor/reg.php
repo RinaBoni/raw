@@ -25,7 +25,7 @@
 
             
             //хеширование пароля
-            $password = password_hash($password, PASSWORD_DEFAULT);
+            //$password = password_hash($password, PASSWORD_DEFAULT);
             
             //sql запрос
             $sql = 'INSERT INTO users(login, email, password) VALUES(:login, :email, :password)';
@@ -35,7 +35,7 @@
             $stmt = $pdo->prepare($sql);
             $stmt->execute($params);
             
-            header('../profile.php');
+            header('Location: ы../profile.php');
 
         } else{
             echo 'пароль не совподает';

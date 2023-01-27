@@ -15,9 +15,9 @@
         $user = $stmt->fetch(PDO::FETCH_OBJ);
 
         if($user){
-            if(password_verify($password, $user->password)){
+            if($password === $user->password){
                 $_SESSION['user_login'] = $user->login;
-                header('../profile.php');
+                header('Location: ../profile.php');
             }else{
                 echo 'неверный пароль';
             }
