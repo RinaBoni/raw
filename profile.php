@@ -20,7 +20,7 @@
         <div class="inf">
             <div class="container">
                 <div class="inf_header">
-                    <?php require_once 'vendor/print_raw.php';?>
+                 <?php //require_once 'vendor/print_raw.php';?>
                     <form action="#" method="get" enctype="multipart/form-data">
                     
                         <h2 class="inf_title">Информация о Вас</h2>
@@ -30,7 +30,7 @@
                             </div>
                         
                         <h2 class="inf_title">Информация о Вашей собаке</h2>
-                        <?php require_once 'vendor/print_raw.php';?>
+                        
                             <div>
                                 <p>Кличка собаки </p>
                                 <input class="inf_input" placeholder="Кличка" tabindex="2" type="text" name="dogname" value="">
@@ -69,5 +69,6 @@
                 </div>  <!--inf_header -->
             </div><!--container -->
         </div><!--inf -->
+        <?php require_once 'vendor/print_raw.php';?>
     </body>
 </html>
