@@ -11,6 +11,8 @@
             <?php else: ?>
                 <a class="nav_link" href="login.php">Вход</a>
                 <a class="nav_link" href="index.php">Главная</a>
+                <a class="nav_link" href="profile.php">Профиль</a>
+                <a class="nav_link" href="raw.php">Рацион</a>
                 
             <?php endif; ?>
             

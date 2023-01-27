@@ -16,7 +16,7 @@
         session_start();
 
     }catch(PDOException $e){
-        die("не могу");
+        die("не могу подключиться к базе данных");
     }
 
 ?>
