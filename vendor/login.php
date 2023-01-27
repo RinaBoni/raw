@@ -16,7 +16,8 @@
 
         if($user){
             if(password_verify($password, $user->password)){
-                header('../profile.html');
+                $_SESSION['user_login'] = $user->login;
+                header('../profile.php');
             }else{
                 echo 'неверный пароль';
             }

@@ -8,14 +8,8 @@
         <title>
             Регистрация
         </title>
-        <meta http-equiv="Content-type" content="text/html; charset = UTF-8"/>
-        <link rel="stylesheet" href="css/style.css"/>
+        <?php require_once 'parts/header.php';?>
         <link rel="stylesheet" href="css/reg-style.css"/>
-
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     </head>
 
 
@@ -23,19 +17,7 @@
     <body>
         
         <header class="header">
-            <div class="container">
-                <div class="header_inner">
-                    <div class="header_logo">RAW</div>
-
-                    <nav class="nav">
-                        <a class="nav_link" href="login.html">Вход</a>
-                        <a class="nav_link" href="profile.html">Профиль</a>
-                        <a class="nav_link" href="raw.html">Рацион</a>
-                        <a class="nav_link" href="index.html">Главная</a>
-                    </nav>
-                </div>
-                
-            </div>
+            <?php require_once 'parts/head.php';?>
         </header>
 
         <form action="vendor/reg.php" method="post">

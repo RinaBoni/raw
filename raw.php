@@ -1,35 +1,44 @@
+<?php require_once 'vendor/conect.php';?>
+
 <!DOCTYPE html>
 <html lang = "ru">
     <head>
         <title>
             Вход
         </title>
-        <meta http-equiv="Content-type" content="text/html; charset = UTF-8"/>
-        <!-- <link rel="stylesheet" href="css/style.css"/> -->
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <?php require_once 'parts/header.php';?>
     </head>
     <body>
         
         <header class="header">
-            <div class="container">
-                <div class="header_inner">
-                    <div class="header_logo">RAW</div>
-
-                    <nav class="nav">
-                        <a class="nav_link" href="login.html">Вход</a>
-                        <a class="nav_link" href="profile.html">Профиль</a>
-                        <a class="nav_link" href="raw.html">Рацион</a>
-                        <a class="nav_link" href="index.html">Главная</a>
-                    </nav>
-                </div>
-                
-            </div>
+            <?php require_once 'parts/head.php';?>
         </header>
 
         
+        <?php if(isset($_SESSION['user_login'])):?>
+
+            <!-- здесь будет результат -->
+            <p>Порция (в г)</p>
+            <p id="porsion"></p>
+
+            <p>Мясо (в г)</p>
+            <p id="meat"></p>
+            <p>Органы (в г)</p>
+            <p id="organs"></p>
+            <p>Печень (в г)</p>
+            <p id="liver"></p>
+            <p>Кости (в г)</p>
+            <p id="bones"></p>
+
+            <script src="js/raw.js"></script>
+
+        <?php else: ?>
+
+            <?php include_once 'parts/noauth.php'; ?>
+
+        <?php endif; ?>
+
+
         <p>Вес (в кг)</p>
         <!-- поле ввода первого числа -->
         <input id="weight" />

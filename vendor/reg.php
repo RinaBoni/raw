@@ -35,7 +35,7 @@
             $stmt = $pdo->prepare($sql);
             $stmt->execute($params);
             
-            echo 'молодец';
+            header('../profile.php');
 
         } else{
             echo 'пароль не совподает';

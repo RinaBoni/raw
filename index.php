@@ -1,34 +1,19 @@
+
+
+
 <!DOCTYPE html>
 <html lang = "ru">
     <head>
         <title>
             Главная
         </title>
-        <meta http-equiv="Content-type" content="text/html; charset = UTF-8"/>
-        
-        <link rel="stylesheet" href="css/style.css"/>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <?php require_once 'parts/header.php';?>
     </head>
     <body>
 
 
         <header class="header">
-            <div class="container">
-                <div class="header_inner">
-                    <div class="header_logo">RAW</div>
-
-                    <nav class="nav">
-                        <a class="nav_link" href="login.html">Вход</a>
-                        <a class="nav_link" href="profile.html">Профиль</a>
-                        <a class="nav_link" href="raw.html">Рацион</a>
-                        <a class="nav_link" href="index.html">Главная</a>
-                    </nav>
-                </div>
-                
-            </div>
+            <?php require_once 'parts/head.php';?>
         </header>
 
        
@@ -51,17 +36,6 @@
             </div>
             </div>
         </div>
-
-
-        <!-- <div class="intro2">
-            <div class="container">
-                <div class="intro2_inner">
-                    <p class="intro2_text">
-                        Существует множество подходов к натуральному кормлению животных, один из них — система питания RAW для собак. В переводе с английского название означает «сырой», то есть речь идет о рационе из необработанных термически продуктов. Как и система BARF, подход RAW основан на том, что собака — хищник. Однако RAW — более радикальный вариант со строгими ограничениями.
-                    </p>
-                </div>
-            </div>
-        </div> -->
 
         
         <section class="section">
@@ -112,21 +86,7 @@
         </section>
 
 
-        <!-- <h2>Основные особенности системы RAW</h2>
-            <p>
-                Если приверженцы подхода БАРФ включают в меню питомцев растительные продукты, то поклонники RAW дают подопечным исключительно еду животного происхождения. Основа меню — мясо, рыба, субпродукты и сырые кости. Овощи, фрукты и другие добавки не предусмотрены. Злаки, бобовые, кисломолочная продукция полностью исключаются.
-            </p>
-            <p>
-                Владельцы, которые придерживаются системы RAW, рекомендуют кормить собак:
-            </p>
-                <ou>
-                    <li>Мясом (около 80 % от всего рациона). Согласно системе, можно давать животному говядину, баранину, оленину, крольчатину, птицу и свинину. В целом, список мясных продуктов не ограничивается. </li>
-                    <li>Костями (10 %). Предлагается включать в диету спинки, ребра, грудки, шейки, крылья, хвосты и так далее. По мнению приверженцев системы, сырые кости не вызывают проблем, в отличие от вареных. Однако на чем основано это убеждение — непонятно.</li>
-                    <li>Субпродуктами (10 %). Допускаются любые органы птицы и рогатого скота. Рекомендуется делать акцент на печени.</li>
-                </ou>
-            <p>
-                Периодически допускается кормление питомца морской рыбой. По системе RAW, ее надо давать с костями, головой, плавниками и другими частями, которые обычно считаются отходами. 
-            </p> -->
+ 
 
             <section class="section">
                 <div class="container">

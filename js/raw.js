@@ -33,7 +33,7 @@
         meat = (porsion / 100) * 80;
         organs = (porsion / 100) * 5;
         liver = (porsion / 100) * 5;
-        bones - (porsion / 100) * 10;
+        bones = (porsion / 100) * 10;
         // result = weight +3;
 	    // отправляем результат на страницу
 	    document.getElementById("porsion").innerHTML = porsion;
