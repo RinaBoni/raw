@@ -29,7 +29,11 @@
             
             //sql запрос
             $sql = 'INSERT INTO users(login, email, password) VALUES(:login, :email, :password)';
-            $params = [':login' => $login, ':email' => $email, ':password' => $password];
+            $params = [
+                ':login' => $login, 
+                ':email' => $email, 
+                ':password' => $password
+            ];
 
             //выполнение
             $stmt = $pdo->prepare($sql);

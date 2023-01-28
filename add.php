@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang = "ru">
     <head>
@@ -20,20 +22,20 @@
         <div class="inf">
             <div class="container">
                 <h2 class="inf_title">Информация о Вашей собаке</h2>    
-                <form action="vendor/add_pet.php"  name="newPet">
+                <form action="vendor/add_pet.php" method="post"  name="newPet">
                     <div>
                         <p>Кличка собаки </p>
-                        <input class="inf_input" placeholder="Кличка" tabindex="2" type="text" name="newPet_name" value="">
+                        <input class="inf_input" placeholder="Кличка" tabindex="2" type="text" name="name" value="">
                     </div>
 
                     <div>
                         <p>Вес собаки </p>
-                        <input  class="inf_input" placeholder="Вес" tabindex="3" type="tel" name="newPet_weight" value="">
+                        <input  class="inf_input" placeholder="Вес" tabindex="3" type="tel" name="weight" value="">
                     </div>
 
                     <div>
                         <p>Активность</p>
-                        <select class="select-css" tabindex="4" name="newPet_activity">
+                        <select class="select-css" tabindex="4" name="activity">
                             <option value="not choosen">--Не выбрано--</option>
                             <option value="low">Стерилизованная (склонная к ожирению)</option>
                             <option value="medium">Средняя активность</option>

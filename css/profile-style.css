@@ -8,6 +8,12 @@
     color: #9773ff;
 }
 
+.inf_title2{
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
 .inf_header{
     width: 100%;
     max-width: 950px;

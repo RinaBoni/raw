@@ -25,14 +25,10 @@
                     
                     
                         <h2 class="inf_title">Добро пожаловать, <?php echo $_SESSION['user_login']; ?></h2>
-                            <div>
-                                <p>Ваше имя </p>
-                                <input  class="inf_input" placeholder="Имя" tabindex="1" type="text" name="username" value="">
-                            </div>
-                        
-                        <h2 class="inf_title">Информация о Вашей собаке</h2>
+                        <P>Ваш id <?php echo $_SESSION['user_id']; ?></P>
                         
                         
+                        <h2 class="inf_title2">Информация о Вашей собаке</h2>                     
                             <div>
                                 <p>Кличка собаки </p>
                                 <p><?php require_once 'vendor/print_raw.php';?></p>
@@ -51,7 +47,8 @@
                             
                             <div>
                                 <p></p>
-                                <button class="inf_butt" tabindex="11" type="submit">Сохранить</button>
+                                <a class="inf_link" href="add.php">Изменить </a>
+                                <a class="inf_link" href="add.php">Добавить </a>
                             </div>
 
                             <div>
@@ -62,7 +59,7 @@
                             <div>
                                 <p></p>
                                 <a class="inf_link" href="vendor/logout.php">Выход из аккаунта </a>
-                                <a class="inf_link" href="add.php">Добавить </a>
+                                
                             </div>
                     </form>
                 </div>  <!--inf_header -->
