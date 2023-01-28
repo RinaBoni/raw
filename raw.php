@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require_once 'vendor/conect.php';?>
 
 <!DOCTYPE html>
@@ -7,6 +8,7 @@
             Вход
         </title>
         <?php require_once 'parts/header.php';?>
+        <link rel="stylesheet" href="css/profile-style.css"/>
     </head>
     <body>
         
@@ -14,21 +16,23 @@
             <?php require_once 'parts/head.php';?>
         </header>
 
-        
+        <div class="inf">
+        <div class="container">
+        <div class="inf_header">
         <?php if(isset($_SESSION['user_login'])):?>
 
             <!-- здесь будет результат -->
-            <p>Порция (в г)</p>
-            <p id="porsion"></p>
+            <h2 class="inf_title">Порция (в г)</h2>
+            <pclass="inf_title" id="porsion"></p>
 
-            <p>Мясо (в г)</p>
-            <p id="meat"></p>
-            <p>Органы (в г)</p>
-            <p id="organs"></p>
-            <p>Печень (в г)</p>
-            <p id="liver"></p>
-            <p>Кости (в г)</p>
-            <p id="bones"></p>
+            <p class="inf_title">Мясо (в г)</p>
+            <p class="inf_title" id="meat"></p>
+            <p class="inf_title" >Органы (в г)</p>
+            <p class="inf_title" id="organs"></p>
+            <p class="inf_title">Печень (в г)</p>
+            <p class="inf_title" id="liver"></p>
+            <p class="inf_title">Кости (в г)</p>
+            <p class="inf_title" id="bones"></p>
 
             <script src="js/raw.js"></script>
 
@@ -37,7 +41,9 @@
             <?php include_once 'parts/noauth.php'; ?>
 
         <?php endif; ?>
-
+        </div>  
+        </div>    
+        </div> 
 
         <p>Вес (в кг)</p>
         <!-- поле ввода первого числа -->
@@ -71,14 +77,14 @@
         <p>Порция (в г)</p>
         <p id="porsion"></p>
 
-        <p>Мясо (в г)</p>
-        <p id="meat"></p>
-        <p>Органы (в г)</p>
-        <p id="organs"></p>
-        <p>Печень (в г)</p>
-        <p id="liver"></p>
-        <p>Кости (в г)</p>
-        <p id="bones"></p>
+        <p class="inf_title">Мясо (в г)</p>
+            <p class="inf_title" id="meat"></p>
+            <p class="inf_title" >Органы (в г)</p>
+            <p class="inf_title" id="organs"></p>
+            <p class="inf_title">Печень (в г)</p>
+            <p class="inf_title" id="liver"></p>
+            <p class="inf_title">Кости (в г)</p>
+            <p class="inf_title" id="bones"></p>
 
     
 

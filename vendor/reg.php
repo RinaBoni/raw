@@ -35,7 +35,7 @@
             $stmt = $pdo->prepare($sql);
             $stmt->execute($params);
             
-            header('Location: ы../profile.php');
+            header('Location: ../profile.php');
 
         } else{
             echo 'пароль не совподает';

@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="css/style.css"/>
     <script type="text/javascript" src="../js/ajax.js"></script>
 
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon">. -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">

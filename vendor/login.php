@@ -6,14 +6,17 @@
 
     if( !empty($login) && !empty($password)){
                 
+        //подготовленный sql запрос
         $sql = 'SELECT login, password FROM users WHERE login = :login';
         $params = [':login' => $login];
 
         $stmt = $pdo->prepare($sql);
         $stmt->execute($params);
                 
+        //результат запроса
         $user = $stmt->fetch(PDO::FETCH_OBJ);
 
+        //если запрос выполнен
         if($user){
             if($password === $user->password){
                 $_SESSION['user_login'] = $user->login;
@@ -22,7 +25,7 @@
                 echo 'неверный пароль';
             }
         }else{
-            echo 'неверный пароль1';
+            echo 'запрос не выполнен';
         }
 
     } else{
