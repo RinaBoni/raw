@@ -14,4 +14,4 @@ if(isset($_COOKIE[session_name()])){
 session_destroy();
 
 //делвем редерект на вход на сайт
-header('Location: ../login.html');
+header('Location: ../login.php');

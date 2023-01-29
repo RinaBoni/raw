@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php //session_start(); ?>
+<?php require_once 'vendor/conect.php'; ?>
 
 <!DOCTYPE html>
 <html lang = "ru">
@@ -28,26 +29,45 @@
                         <P>Ваш id <?php echo $_SESSION['user_id']; ?></P>
                         
                         
-                        <h2 class="inf_title2">Информация о Вашей собаке</h2>                     
+                        <h2 class="inf_title2">Информация о Вашей собаке</h2>
+                        
+                        <?php
+                        
+
+                        $sql = 'SELECT pets.id, pets.name, pets.weight, pets.activity, users.login FROM pets INNER JOIN users ON users.id=pets.id_user WHERE users.id = :id GROUP BY pets.id, pets.name, pets.weight, pets.activity, users.login;';
+
+                        //результат sql запроса
+                        $params = [':id' => $_SESSION['user_id']];
+
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute($params);
+
+
+                        //извлекаем результат при прмощи метода fetch
+                        $pets=$stmt->fetch(PDO::FETCH_OBJ)
+                        ?>
+                            
+                        
                             <div>
-                                <p>Кличка собаки </p>
-                                <p><?php require_once 'vendor/print_raw.php';?></p>
+                                <h3>Кличка собаки </h3>
+                                <p><?php echo $pets->name ?></p>
                                 
                             </div>
 
                             <div>
-                                <p>Вес собаки </p>
-                                <p></p>
+                                <h3>Вес собаки </h3>
+                                <p><?php echo $pets->weight ?></p>
                             </div>
 
                             <div>
-                                <p>Активность</p>
-                                <p></p>
+                                <h3>Активность</h3>
+                                <p><?php echo $pets->activity ?></p>
                             </div>
                             
                             <div>
                                 <p></p>
-                                <a class="inf_link" href="add.php">Изменить </a>
+                                <a class="inf_link" href="change.php">Изменить </a>
+
                                 <a class="inf_link" href="add.php">Добавить </a>
                             </div>
 
@@ -61,7 +81,7 @@
                                 <a class="inf_link" href="vendor/logout.php">Выход из аккаунта </a>
                                 
                             </div>
-                    </form>
+                   
                 </div>  <!--inf_header -->
             </div><!--container -->
         </div><!--inf -->
