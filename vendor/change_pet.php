@@ -43,7 +43,9 @@ if( !empty($weight) && !empty($activity)){
 
     }catch(PDOException $e){
     
-        echo 'Во время добавления питомца произошла ошибка' . $e->getMessage();
+        // echo 'Во время добавления питомца произошла ошибка' . $e->getMessage();
+        $_SESSION['error'] = 'Во время добавления питомца произошла ошибка';
+        header('Location: ../errors.php');
     
         //отзываем все добавленные элементы
         $pdo->rollBack();

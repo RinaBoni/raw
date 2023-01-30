@@ -20,7 +20,8 @@
             $stmt_check->execute([':login' => $login]);
 
             if($stmt_check->fetchColumn()){
-                die('Пользователь с таким логином существует');
+                $_SESSION['error'] = 'Пользователь с таким логином существует';
+                header('Location: ../errors.php');
             }
 
             
@@ -42,9 +43,11 @@
             header('Location: ../profile.php');
 
         } else{
-            echo 'пароль не совподает';
+            $_SESSION['error'] = 'пароль не совподает';
+            header('Location: ../errors.php');
         }
     } else{
-        echo 'заполните все поля';
+        $_SESSION['error'] = 'заполните все поля';
+        header('Location: ../errors.php');
     }    
 ?>

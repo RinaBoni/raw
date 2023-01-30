@@ -32,5 +32,6 @@ if(!empty($name) && !empty($weight) && !empty($activity)){
 
 
 }else{
-    die('Пожалуйста, заполните все поля');
+    $_SESSION['error'] = 'Пожалуйста, заполните все поля';
+    header('Location: ../errors.php');
 }

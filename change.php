@@ -4,7 +4,7 @@
 <html lang = "ru">
     <head>
         <title>
-            Профиль
+            Изменить
         </title>
         <?php require_once 'parts/header.php';?>
         <link rel="stylesheet" href="css/profile-style.css"/>

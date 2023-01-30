@@ -26,13 +26,16 @@
                 // echo $_SESSION['user_id'];
                 header('Location: ../profile.php');
             }else{
-                echo 'неверный пароль';
+                $_SESSION['error'] = 'неверный пароль';
+                header('Location: ../errors.php');
             }
         }else{
-            echo 'неверный логин';
+            $_SESSION['error'] = 'неверный логин';
+            header('Location: ../errors.php');
         }
 
     } else{
-        echo 'заполните все поля';
+        $_SESSION['error'] = 'заполните все поля';
+        header('Location: ../errors.php');
     }    
 ?>

@@ -17,7 +17,8 @@
 
     }catch(PDOException $e){
         //исключение
-        die("не могу подключиться к базе данных");
+        $_SESSION['error'] = "не могу подключиться к базе данных";
+        header('Location: ../errors.php');
     }
 
 ?>
