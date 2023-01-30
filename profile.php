@@ -26,42 +26,58 @@
                     
                     
                         <h2 class="inf_title">Добро пожаловать, <?php echo $_SESSION['user_login']; ?></h2>
-                        <P>Ваш id <?php echo $_SESSION['user_id']; ?></P>
+                            <P>Ваш id: <?php echo $_SESSION['user_id']; ?></P>
                         
                         
                         <h2 class="inf_title2">Информация о Вашей собаке</h2>
                         
                         <?php
-                        
+                            $sql = 'SELECT pets.id, pets.name, pets.weight, pets.activity, users.login FROM pets INNER JOIN users ON users.id=pets.id_user WHERE users.id = :id GROUP BY pets.id, pets.name, pets.weight, pets.activity, users.login;';
 
-                        $sql = 'SELECT pets.id, pets.name, pets.weight, pets.activity, users.login FROM pets INNER JOIN users ON users.id=pets.id_user WHERE users.id = :id GROUP BY pets.id, pets.name, pets.weight, pets.activity, users.login;';
+                            //результат sql запроса
+                            $params = [':id' => $_SESSION['user_id']];
 
-                        //результат sql запроса
-                        $params = [':id' => $_SESSION['user_id']];
-
-                        $stmt = $pdo->prepare($sql);
-                        $stmt->execute($params);
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->execute($params);
 
 
-                        //извлекаем результат при прмощи метода fetch
-                        $pets=$stmt->fetch(PDO::FETCH_OBJ)
+                            //извлекаем результат при прмощи метода fetch
+                            $pets=$stmt->fetch(PDO::FETCH_OBJ)
                         ?>
                             
-                        
                             <div>
-                                <h3>Кличка собаки </h3>
-                                <p><?php echo $pets->name ?></p>
-                                
+                                <p class="inf_h3">
+                                    Имя: 
+                                    <span class="inf_text">
+                                        <?php echo $pets->name ?>
+                                    </span>
+                                </p>
                             </div>
 
                             <div>
-                                <h3>Вес собаки </h3>
-                                <p><?php echo $pets->weight ?></p>
+                                <p class="inf_h3">
+                                    Вес: 
+                                    <span class="inf_text">
+                                        <?php echo $pets->weight ?>
+                                    </span>
+                                </p>
                             </div>
 
                             <div>
-                                <h3>Активность</h3>
-                                <p><?php echo $pets->activity ?></p>
+                                <p class="inf_h3">
+                                    Активность: 
+                                    <span class="inf_text">
+                                        <?php 
+                                            if ($pets->activity === 'low'){
+                                                echo 'Низкая активность';
+                                            } elseif ($pets->activity === 'medium'){
+                                                echo 'Средняя активность';
+                                            } elseif ($pets->activity === 'high'){
+                                                echo 'Высокая активность';
+                                            }
+                                        ?>
+                                    </span>
+                                </p>    
                             </div>
                             
                             <div>
@@ -71,20 +87,21 @@
                                 <a class="inf_link" href="add.php">Добавить </a>
                             </div>
 
-                            <div>
-                                <p></p>
-                                <a class="inf_link" href="raw.php">Расчитать рацион</a>
-                            </div>
+                        <div>
+                            <a class="inf_link_porsion" href="raw.php">Расчитать рацион</a>
+                        </div>
 
-                            <div>
-                                <p></p>
-                                <a class="inf_link" href="vendor/logout.php">Выход из аккаунта </a>
-                                
-                            </div>
+                        <div class="footer">
+                            <div class="container">
+                                <div class="footer_inner">
+                                    <div></div>
+                                    <a class="inf_link_logout" href="vendor/logout.php">Выход из аккаунта </a>
+                                </div><!--footer_inner-->
+                            </div><!--container-->
+                        </div><!--footer-->
                    
                 </div>  <!--inf_header -->
             </div><!--container -->
         </div><!--inf -->
-        <?php require_once 'vendor/print_raw.php';?>
     </body>
 </html>

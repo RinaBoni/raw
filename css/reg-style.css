@@ -1,4 +1,4 @@
-form{
+main{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -6,6 +6,7 @@ form{
     align-items: center;
 }
 
+/* кружочек */
 .circle{
     position: absolute;
     z-index: 1;
@@ -22,6 +23,7 @@ form{
     animation-fill-mode: forwards;
 }
 
+/* появление круга */
 @keyframes fadeCircle {
     0%{
         width: 2534px;
@@ -45,6 +47,7 @@ form{
     }  
 }
 
+/* контенер */
 .reg_container{
     opacity: 0;
     position: relative;
@@ -66,6 +69,7 @@ form{
     animation-fill-mode: forwards;
 }
 
+/* появление */
 @keyframes fadeForm {
     0%{
         opacity: 0;
@@ -84,42 +88,62 @@ form{
     }  
 }
 
+/* заголовок */
 .reg_title{
     color: #fff;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
-    margin-bottom: 38px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
 }
 
 /* .reg_fields{
 
 } */
 
-/* .field{
+/* поле */
+.field{
     margin-bottom: 13px;
-} */
+}
 
+/* ввод */
 .reg_field_input{
     background: none;
-    height: 45px;
-    width: 100%;
-    font-size: 14px;
-    line-height: 16px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
     border: 2px solid #beff73;
+    padding: 14px, 10px;
+    width: 325px;
+    height: 45px;
+    outline: none;
+    color: #fff;
     border-radius: 24px;
-    padding-left: 25px;
+    transition: .25s;
+}
+
+/* ввод в фокусе */
+.reg_field_input:focus{
+    width: 100%;
+    background-color: #beff73;
+    color: #242424;
 }
 
 /* .reg_buttons{
 
 } */
 
+
+/* кнопка */
 .butt{
     background: none;
     display: block;
+    margin: 20px auto;
     height: 45px;
-    width: 100%;
+    width: 325px;
     border: 2px solid #beff73;
     color: #fff;
     border-radius: 24px;
@@ -130,12 +154,14 @@ form{
     cursor: pointer;
 }
 
+/* наведение на кнопку */
 .butt:hover{
     text-decoration: none;
     background-color: #beff73;
     color: #242424;
 }
 
+/* кнопка регистрации через гугл */
 .butt_google{
     background: #bfa1ff;
     display: block;
@@ -152,12 +178,14 @@ form{
     text-decoration: none;
 }
 
+/* наведение на кнопку */
 .butt_google:hover{
     text-decoration: none;
     background-color: #beff73;
     color: #242424;
 }
 
+/* пространство между кнопками */
 .divider{
     font-weight: 700;
     font-size: 12px;

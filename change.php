@@ -45,7 +45,10 @@
                     </div>
                            
                 </form>
-                
+                <div>
+                        <p></p>
+                        <a class="inf_link" href="profile.php">Отмена </a>
+                </div>
             </div><!--container -->
         </div><!--inf -->
     </body>

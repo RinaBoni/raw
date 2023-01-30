@@ -1,0 +1,33 @@
+.raw{
+    padding: 150px 0;
+}
+
+.raw_header{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+}
+
+.raw_tittle{
+    font-size: 30px;
+    font-weight: 700;
+    color: #9773ff;
+}
+
+.raw_subtitle{
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.raw_subtitle_ing{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.raw_text{
+    font-size: 20px;
+    font-weight: 400;
+    color: #f1e7ff;
+}
