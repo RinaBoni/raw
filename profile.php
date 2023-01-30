@@ -32,6 +32,7 @@
                         <h2 class="inf_title2">Информация о Вашей собаке</h2>
                         
                         <?php
+                            
                             $sql = 'SELECT pets.id, pets.name, pets.weight, pets.activity, users.login FROM pets INNER JOIN users ON users.id=pets.id_user WHERE users.id = :id GROUP BY pets.id, pets.name, pets.weight, pets.activity, users.login;';
 
                             //результат sql запроса
@@ -44,8 +45,17 @@
                             //извлекаем результат при прмощи метода fetch
                             $pets=$stmt->fetch(PDO::FETCH_OBJ)
                         ?>
-                            
-                            <div>
+                        <?php 
+                            if (empty($pets->name) ):                            
+                        ?>
+                        <div>
+                            <p></p>
+                            <a class="inf_link" href="add.php">Добавить </a>
+                        </div>
+
+                        <?php else:
+                        ?>
+                        <div>
                                 <p class="inf_h3">
                                     Имя: 
                                     <span class="inf_text">
@@ -83,13 +93,13 @@
                             <div>
                                 <p></p>
                                 <a class="inf_link" href="change.php">Изменить </a>
-
-                                <a class="inf_link" href="add.php">Добавить </a>
                             </div>
 
                         <div>
                             <a class="inf_link_porsion" href="raw.php">Расчитать рацион</a>
                         </div>
+                        <?php endif;?>
+                            
 
                         <div class="footer">
                             <div class="container">

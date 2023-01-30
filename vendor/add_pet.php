@@ -13,7 +13,7 @@ echo $id_user;
 if(!empty($name) && !empty($weight) && !empty($activity)){
  
     
-        $sql = 'INSERT INTO pets( id_user, name, weight, activity) VALUES(:id_user, :name, :weight, :activity';
+        $sql = 'INSERT INTO `pets`( `id_user`, `name`, `weight`, `activity`) VALUES(:id_user, :name, :weight, :activity';
         $params = [
         
             ':id_user' => $id_user,
