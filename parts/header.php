@@ -2,7 +2,6 @@
     <meta http-equiv="Content-type" content="text/html; charset = UTF-8"/>
         
     <link rel="stylesheet" href="css/style.css"/>
-    <script type="text/javascript" src="../js/ajax.js"></script>
 
     <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon">. -->
 

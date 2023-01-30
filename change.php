@@ -21,16 +21,16 @@
 
         <div class="inf">
             <div class="container">
-                <h2 class="inf_title">Информация о Вашей собаке</h2>    
+                <h2 class="inf_title">Изменение информации о Вашей собаке</h2>    
                 <form action="vendor/change_pet.php" method="post"  name="newPet">
 
                     <div>
-                        <p>Вес собаки </p>
+                        <p class="inf_h3">Вес собаки </p>
                         <input  class="inf_input" placeholder="Вес" tabindex="3" type="tel" name="weight" value="">
                     </div>
 
                     <div>
-                        <p>Активность</p>
+                        <p class="inf_h3">Активность</p>
                         <select class="select-css" tabindex="4" name="activity">
                             <option value="not choosen">--Не выбрано--</option>
                             <option value="low">Стерилизованная (склонная к ожирению)</option>

@@ -23,10 +23,10 @@
         <div class="inf">
             <div class="container">
                 <div class="inf_header">
-                    
+                <?php if(isset($_SESSION['user_login'])):?>
                     
                         <h2 class="inf_title">Добро пожаловать, <?php echo $_SESSION['user_login']; ?></h2>
-                            <P>Ваш id: <?php echo $_SESSION['user_id']; ?></P>
+                            <P class="inf_text">Ваш id: <?php echo $_SESSION['user_id']; ?></P>
                         
                         
                         <h2 class="inf_title2">Информация о Вашей собаке</h2>
@@ -109,6 +109,9 @@
                                 </div><!--footer_inner-->
                             </div><!--container-->
                         </div><!--footer-->
+                        <?php else: ?>
+                        <?php include_once 'parts/noauth.php'; ?>
+                    <?php endif; ?>
                    
                 </div>  <!--inf_header -->
             </div><!--container -->

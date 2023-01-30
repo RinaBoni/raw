@@ -1,4 +1,5 @@
 <?php
+    //подключение к бд
     require_once 'conect.php';
 
     $login = trim($_POST['login']);
@@ -28,7 +29,7 @@
                 echo 'неверный пароль';
             }
         }else{
-            echo 'запрос не выполнен';
+            echo 'неверный логин';
         }
 
     } else{
