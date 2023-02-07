@@ -13,18 +13,32 @@ echo $id_user;
 if(!empty($name) && !empty($weight) && !empty($activity)){
  
     
-    $sql = 'INSERT INTO `pets`( `id_user`, `name`, `weight`, `activity`) VALUES(:id_user, :name, :weight, :activity';
-    $params = [
+    // $sql = 'INSERT INTO `pets`( `id_user`, `name`, `weight`, `activity`) VALUES(:id_user, :name, :weight, :activity';
+    // $params = [
     
-        //':id_user' => $_SESSION['user_id'],
-        'id_user' => $id_user,
-        'name' => $name,
-        'weight' => $weight,
-        'activity' => $activity
-    ];
+    //     //':id_user' => $_SESSION['user_id'],
+    //     'id_user' => $id_user,
+    //     'name' => $name,
+    //     'weight' => $weight,
+    //     'activity' => $activity
+    // ];
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute($params);
+    // $stmt = $pdo->prepare($sql);
+    // $stmt->execute($params);
+
+    $sql = 'INSERT INTO `pets`( `id_user`, `name`, `weight`, `activity`) VALUES(9, "Cokkie", 8, "low"';
+    // $params = [
+    
+    //     //':id_user' => $_SESSION['user_id'],
+    //     'id_user' => $id_user,
+    //     'name' => $name,
+    //     'weight' => $weight,
+    //     'activity' => $activity
+    // ];
+
+    // $stmt = $pdo->prepare($sql);
+    $stmt->execute($sql);
+
     // $sql = mysqli_query($stmt, 'INSERT INTO `pets`( `id_user`, `name`, `weight`, `activity`) 
     //                             VALUES 
     //                             ('{$_SESSION['user_id']}', '{$_POST['name']}', '{$_POST['weight']}', '{$_POST['activity']}')');
